@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons/site.ico" type="image/x-icon" sizes="any">
+    <title>Карты - Хроники забытых империй</title>
+    <meta name="description" content="Каталог карт игры Хроники забытых империй: герои, существа, заклинания, артефакты, ловушки и фильтры по типам для быстрого поиска карт.">
+    <meta name="keywords" content="карты настольной игры, карточная игра, герои, заклинания, артефакты, каталог карт, настольные игры">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <link rel="canonical" href="https://cofe-game.ru/cards">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Хроники забытых империй">
+    <meta property="og:title" content="Карты - Хроники забытых империй">
+    <meta property="og:description" content="Полный каталог карт с фильтрами и сортировкой: герои, существа, заклинания, орудия, ловушки и артефакты.">
+    <meta property="og:url" content="https://cofe-game.ru/cards">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fantasy.css">
+    <link rel="stylesheet" href="css/rules-premium.css">
+</head>
+<body>
+    <!-- Навигационная панель -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-image">
+                    <!-- Логотип компании: разместить изображение здесь -->
+                    <img src="images/logo.png" alt="Logo" class="logo-img">
+                </div>
+                <div class="logo">
+                <span class="logo-text">Хроники забытых империй</span>
+            </div>
+                
+                <nav class="nav-menu">
+                    <a href="index.html" class="nav-link">ГЛАВНАЯ</a>
+                    <a href="rules.html" class="nav-link">ПРАВИЛА</a>
+                    <a href="cards.html" class="nav-link active">КАРТЫ</a>
+                    <a href="about.html" class="nav-link">ОБ ИГРЕ</a>
+                </nav>
+
+                <div class="game-selector">
+                    <button class="selector-btn">Выбор настолки</button>
+                    <div class="selector-dropdown">
+                        <a href="index.html" class="selector-item active">Хроники забытых империй</a>
+                        <div class="selector-item disabled">Скоро...</div>
+                    </div>
+                </div>
+
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-nav-link">Главная</a>
+        <a href="rules.html" class="mobile-nav-link">Правила игры</a>
+        <a href="cards.html" class="mobile-nav-link active">Игровые карты</a>
+        <a href="about.html" class="mobile-nav-link">Об этой игре</a>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-reveal-section">
+            <h2>Каталог карт</h2>
+
+            <!-- Поиск и фильтры -->
+            <div class="cards-controls">
+                <div class="search-box">
+                    <div class="search-input-wrap">
+                        <img src="images/icons/cards/icon-search.svg" alt="" class="search-box-icon" width="18" height="18" decoding="async" aria-hidden="true">
+                        <input type="text" id="searchInput" placeholder="Поиск по названию или способности...">
+                    </div>
+                </div>
+
+                <div class="filters-section">
+                    <div class="filter-group">
+                        <label for="filterType">Тип карты:</label>
+                        <select id="filterType">
+                            <option value="">Все</option>
+                            <option value="heroes">Герои</option>
+                            <option value="beasts">Звери</option>
+                            <option value="demons">Демоны</option>
+                            <option value="spirits">Духи</option>
+                            <option value="undead">Нежить</option>
+                            <option value="dragons">Драконы</option>
+                            <option value="orcs">Орки</option>
+                            <option value="weapons">Орудия</option>
+                            <option value="traps">Ловушки</option>
+                            <option value="artifacts">Артефакты</option>
+                            <option value="catacombs">Входы в катакомбы</option>
+                            <option value="spells">Заклинания</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="sortBy">Сортировка:</label>
+                        <select id="sortBy">
+                            <option value="name">По алфавиту</option>
+                            <option value="atk">По АТК</option>
+                            <option value="hp">По HР</option>
+                            <option value="mana">По стоимости МР</option>
+                        </select>
+                    </div>
+
+                    <button id="resetFilters" class="btn btn-small">Сбросить</button>
+                </div>
+            </div>
+
+            <!-- Вкладки типов карт (мобильная версия использует select) -->
+            <div class="cards-tabs" id="cardsTabs">
+                <button class="card-tab-btn active" data-type="">Все карты</button>
+                <button class="card-tab-btn" data-type="heroes">Герои (12)</button>
+                <button class="card-tab-btn" data-type="beasts">Звери (8)</button>
+                <button class="card-tab-btn" data-type="demons">Демоны (4)</button>
+                <button class="card-tab-btn" data-type="spirits">Духи (3)</button>
+                <button class="card-tab-btn" data-type="undead">Нежить (4)</button>
+                <button class="card-tab-btn" data-type="dragons">Драконы (4)</button>
+                <button class="card-tab-btn" data-type="orcs">Орки (4)</button>
+                <button class="card-tab-btn" data-type="weapons">Орудия (5)</button>
+                <button class="card-tab-btn" data-type="traps">Ловушки (5)</button>
+                <button class="card-tab-btn" data-type="artifacts">Артефакты (11)</button>
+                <button class="card-tab-btn" data-type="spells">Заклинания (21)</button>
+                <button class="card-tab-btn" data-type="catacombs">Входы в Катакомбы (10)</button>
+            </div>
+
+            <!-- Сетка карт -->
+            <div class="cards-grid" id="cardsGrid">
+                <!-- Заполняется JavaScript -->
+            </div>
+
+            <!-- Не забыли про Входы в катакомбы? -->
+            <div id="catacombs-special" style="display:none;" class="cards-grid">
+                <div class="card-item">
+                    <div class="card-container" data-card-id="61">
+                        <img src="images/cards/catacombs-entrance.jpg" alt="Вход в катакомбы" class="card-img">
+                        <div class="card-info">
+                            <h4>Вход в Катакомбы</h4>
+                            <p class="card-type type-catacombs">Вход в подземелье</p>
+                            <div class="card-stats">
+                                <span class="card-stat-row">
+                                    <img src="images/icons/cards/stat-mana.svg" alt="" class="card-stat-icon" width="17" height="17" decoding="async">
+                                    <span class="card-stat-text">Стоимость МР: 1</span>
+                                </span>
+                            </div>
+                            <p class="card-description">В игровой колоде содержится <strong>10 идентичных карт</strong> "Вход в Катакомбы".</p>
+                            <p class="card-ability">При использовании: возьмите 1 карту из колоды Катакомб (артефакт или ловушка).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Сообщение пустого поиска -->
+            <div id="noResults" style="display:none;" class="text-center">
+                <p style="font-size: 1.2rem; color: #888;">Карты по вашему запросу не найдены.</p>
+            </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Модальное окно карты -->
+    <div id="cardModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body">
+                <img id="modalCardImage" src="" alt="" class="modal-card-image">
+                <div class="modal-card-info">
+                    <h3 id="modalCardName"></h3>
+                    <p id="modalCardType" class="card-type"></p>
+                    <div class="modal-stats">
+                        <div id="modalCardStats"></div>
+                    </div>
+                    <p id="modalCardAbility" class="card-ability"></p>
+                    <p id="modalCardNote" class="card-note" style="display:none;"></p>
+                    <button id="backToList" class="btn btn-secondary">← Назад к списку</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="back-to-top" id="backToTop" aria-label="Наверх">↑</button>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 ЭНТУЗИАСТ</p>
+                <div class="footer-links">
+                    <a href="https://vk.com/vladkragv" target="_blank" class="footer-link">VK</a>
+                    <a href="https://t.me/vladkragv" target="_blank" class="footer-link">Telegram</a>
+                    <span class="footer-byline">by vladkragv</span>
+                </div>
+                <div class="footer-lang">
+                    <label for="langSwitcher" class="footer-lang-label">Язык</label>
+                    <select id="langSwitcher" class="footer-lang-select" aria-label="Смена языка сайта">
+                        <option value="ru">Русский</option>
+                        <option value="en">English</option>
+                        <option value="kk">Qazaqsha</option>
+                        <option value="uk">Українська</option>
+                        <option value="be">Беларуская</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </div>
+                <div class="footer-age-rating">14+</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/card-i18n.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/dynamic-content.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/responsive-optimization.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cards.js"></script>
+</body>
+</html>

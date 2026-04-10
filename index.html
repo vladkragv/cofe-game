@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons/site.ico" type="image/x-icon" sizes="any">
+    <title>Хроники забытых империй - Настольная Карточная Игра</title>
+    <meta name="description" content="Хроники забытых империй - настольная карточная игра для 2-6 игроков: герои, катакомбы, артефакты, тактика и быстрые партии 20-40 минут.">
+    <meta name="keywords" content="настольная игра, карточная игра, настольные игры, фэнтези, герои, катакомбы, правила игры, Хроники забытых империй">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <link rel="canonical" href="https://cofe-game.ru/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Хроники забытых империй">
+    <meta property="og:title" content="Хроники забытых империй - Настольная карточная игра">
+    <meta property="og:description" content="Эпическая настольная карточная игра: 12 героев, десятки карт, катакомбы, артефакты и динамичные сражения.">
+    <meta property="og:url" content="https://cofe-game.ru/">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fantasy.css">
+    <link rel="stylesheet" href="css/minigame.css">
+</head>
+<body class="page-home">
+    <!-- Навигационная панель -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-image">
+                    <!-- Логотип компании: разместить изображение здесь -->
+                    <img src="images/logo.png" alt="Logo" class="logo-img">
+                </div>
+                <div class="logo">
+                <span class="logo-text">Хроники забытых империй</span>
+            </div>
+                
+                <div class="game-selector">
+                    <button class="selector-btn">Выбор настолки</button>
+                    <div class="selector-dropdown">
+                        <a href="index.html" class="selector-item active">Хроники забытых империй</a>
+                        <div class="selector-item disabled">Скоро...</div>
+                    </div>
+                </div>
+
+                <nav class="nav-menu">
+                    <a href="index.html" class="nav-link active">ГЛАВНАЯ</a>
+                    <a href="rules.html" class="nav-link">ПРАВИЛА</a>
+                    <a href="cards.html" class="nav-link">КАРТЫ</a>
+                    <a href="about.html" class="nav-link">ОБ ИГРЕ</a>
+                </nav>
+
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-nav-link active">ГЛАВНАЯ</a>
+        <a href="rules.html" class="mobile-nav-link">ПРАВИЛА</a>
+        <a href="cards.html" class="mobile-nav-link">КАРТЫ</a>
+        <a href="about.html" class="mobile-nav-link">ОБ ИГРЕ</a>
+    </div>
+
+    <!-- Основной контент: hero и блоки страницы — один слой фона (main-content) -->
+    <main class="main-content">
+        <!-- Верхний блок: только золотое свечение поверх общего фона страницы (без фото/видео) -->
+        <section class="hero">
+            <div class="hero-gold-glow" aria-hidden="true"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Хроники забытых империй</h1>
+                <p class="hero-subtitle">Эпическая настольная карточная игра о вызове судьбе</p>
+                <a href="https://www.avito.ru/" class="btn btn-primary" target="_blank">Купить настольную игру на «Авито»</a>
+                <button id="openMiniGame" class="btn btn-secondary hero-minigame-btn" type="button">Войти в Катакомбы: Мини-игра</button>
+            </div>
+            <button type="button" class="hero-scroll-hint" id="heroScrollHint" aria-label="Прокрутить страницу вниз к содержимому">
+                <span class="hero-scroll-hint__chevrons" aria-hidden="true">
+                    <svg class="hero-scroll-hint__svg" viewBox="0 0 28 27" width="28" height="26" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                        <path class="hero-scroll-hint__chev hero-scroll-hint__chev--1" d="M4 5 L14 11 L24 5" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path class="hero-scroll-hint__chev hero-scroll-hint__chev--2" d="M4 12 L14 18 L24 12" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path class="hero-scroll-hint__chev hero-scroll-hint__chev--3" d="M4 19 L14 25 L24 19" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+            </button>
+        </section>
+
+        <div class="container">
+            <!-- Описание игры -->
+            <section class="game-description">
+                <h2>О игре</h2>
+                <p>
+                    «Хроники забытых империй» — стратегическая карточная игра для 2 - 6 игроков, где вы выбираете уникального героя и ведёте его через опасные подземелья, собирая артефакты и противостоя врагам. Каждая партия занимает 30–60 минут и требует как удачи, так и тактического мышления. Комбинируйте способности карт, управляйте ресурсами маны и стройте правильную стратегию атаки, чтобы остаться последним выжившим!
+                </p>
+            </section>
+
+            <!-- Галерея карт -->
+            <section class="cards-gallery">
+                <h2>12 УНИКАЛЬНЫХ ГЕРОЕВ</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="card-preview">
+                            <img src="images/cards/hero-1.jpg" alt="Герой" class="card-image">
+                        </div>
+                        <p class="card-name">Орк-Берсерк</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="card-preview">
+                            <img src="images/cards/hero-2.jpg" alt="Герой" class="card-image">
+                        </div>
+                        <p class="card-name">Ассасин</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="card-preview">
+                            <img src="images/cards/hero-3.jpg" alt="Герой" class="card-image">
+                        </div>
+                        <p class="card-name">Некромант</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="card-preview">
+                            <img src="images/cards/hero-4.jpg" alt="Герой" class="card-image">
+                        </div>
+                        <p class="card-name">Маг Эльф</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="card-preview">
+                            <img src="images/cards/hero-5.jpg" alt="Герой" class="card-image">
+                        </div>
+                        <p class="card-name">Маг Лекарь</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="card-preview">
+                            <img src="images/cards/hero-6.jpg" alt="Герой" class="card-image">
+                        </div>
+                        <p class="card-name">Стрелок Лучник</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="card-preview">
+                            <img src="images/cards/hero-7.jpg" alt="Герой" class="card-image">
+                        </div>
+                        <p class="card-name">Паладин</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="card-preview">
+                            <img src="images/cards/hero-8.jpg" alt="Герой" class="card-image">
+                        </div>
+                        <p class="card-name">Темный Маг</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="card-preview">
+                            <img src="images/cards/hero-9.jpg" alt="Герой" class="card-image">
+                        </div>
+                        <p class="card-name">Чародей</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="card-preview">
+                            <img src="images/cards/hero-10.jpg" alt="Герой" class="card-image">
+                        </div>
+                        <p class="card-name">Гладиатор</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="card-preview">
+                            <img src="images/cards/hero-11.jpg" alt="Герой" class="card-image">
+                        </div>
+                        <p class="card-name">Друид</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="card-preview">
+                            <img src="images/cards/hero-12.jpg" alt="Герой" class="card-image">
+                        </div>
+                        <p class="card-name">Наездник Дракона</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="cards.html" class="btn btn-secondary">Все карты —</a>
+                </div>
+            </section>
+
+            <!-- Цифры -->
+            <section class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">12</span>
+                    <span class="stat-label">Героев</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">80+</span>
+                    <span class="stat-label">Карт</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2–6</span>
+                    <span class="stat-label">Игроков</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">20–40</span>
+                    <span class="stat-label">Минут</span>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <button class="back-to-top" id="backToTop" aria-label="Наверх">↑</button>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 ЭНТУЗИАСТ</p>
+                <div class="footer-links">
+                    <a href="https://vk.com/vladkragv" target="_blank" class="footer-link">VK</a>
+                    <a href="https://t.me/vladkragv" target="_blank" class="footer-link">Telegram</a>
+                    <span class="footer-byline">by vladkragv</span>
+                </div>
+                <div class="footer-lang">
+                    <label for="langSwitcher" class="footer-lang-label">Язык</label>
+                    <select id="langSwitcher" class="footer-lang-select" aria-label="Смена языка сайта">
+                        <option value="ru">Русский</option>
+                        <option value="en">English</option>
+                        <option value="kk">Qazaqsha</option>
+                        <option value="uk">Українська</option>
+                        <option value="be">Беларуская</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </div>
+                <div class="footer-age-rating">14+</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/card-i18n.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/dynamic-content.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/minigame.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

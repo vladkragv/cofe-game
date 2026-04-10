@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons/site.ico" type="image/x-icon" sizes="any">
+    <title>Правила - Хроники забытых империй</title>
+    <meta name="description" content="Краткие и подробные правила настольной карточной игры Хроники забытых империй: подготовка, ходы, атаки, катакомбы, артефакты и условия победы.">
+    <meta name="keywords" content="правила настольной игры, правила карточной игры, как играть, настольные игры, Хроники забытых империй, катакомбы, артефакты">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <link rel="canonical" href="https://cofe-game.ru/rules">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Хроники забытых империй">
+    <meta property="og:title" content="Правила - Хроники забытых империй">
+    <meta property="og:description" content="Изучите краткие и подробные правила, чтобы быстро начать игру и уверенно побеждать в партиях.">
+    <meta property="og:url" content="https://cofe-game.ru/rules">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fantasy.css">
+    <link rel="stylesheet" href="css/rules-premium.css">
+</head>
+<body>
+    <script>
+        // Для генерации PDF: передавайте ?printVariant=quick или ?printVariant=full
+        (function () {
+            try {
+                const v = new URLSearchParams(window.location.search).get('printVariant');
+                if (v) document.body.classList.add(`print-${v}`);
+            } catch (e) {
+                // Игнорируем ошибки, если URLSearchParams недоступен
+            }
+        })();
+    </script>
+    <!-- Навигационная панель -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-image">
+                    <!-- Логотип компании: разместить изображение здесь -->
+                        <img src="images/logo.png" alt="Logo" class="logo-img">
+                </div>
+                <div class="logo">
+                <span class="logo-text">Хроники забытых империй</span>
+            </div>
+                
+                <nav class="nav-menu">
+                    <a href="index.html" class="nav-link">ГЛАВНАЯ</a>
+                    <a href="rules.html" class="nav-link active">ПРАВИЛА</a>
+                    <a href="cards.html" class="nav-link">КАРТЫ</a>
+                    <a href="about.html" class="nav-link">ОБ ИГРЕ</a>
+                </nav>
+
+                <div class="game-selector">
+                    <button class="selector-btn">Выбор настолки</button>
+                    <div class="selector-dropdown">
+                        <a href="index.html" class="selector-item active">Хроники забытых империй</a>
+                        <div class="selector-item disabled">Скоро...</div>
+                    </div>
+                </div>
+
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-nav-link">Главная</a>
+        <a href="rules.html" class="mobile-nav-link active">Правила игры</a>
+        <a href="cards.html" class="mobile-nav-link">Игровые карты</a>
+        <a href="about.html" class="mobile-nav-link">Об этой игре</a>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-reveal-section">
+            <!-- Вкладки правил -->
+            <div class="rules-tabs">
+                <button class="rules-tab-btn active" data-tab="quick">Краткие правила</button>
+                <button class="rules-tab-btn" data-tab="detailed">Подробные правила</button>
+            </div>
+
+            <!-- КРАТКИЕ ПРАВИЛА -->
+            <section id="quick-rules" class="rules-section active">
+                <h2>Краткие правила</h2>
+                
+                <div class="infographic-flow" id="quickRulesFlow"></div>
+
+                <div class="key-points">
+                    <div class="point-item">
+                        <div class="point-icon"><img src="images/icons/rules-quick/quick-decks.svg" alt="" width="32" height="32" decoding="async"></div>
+                        <h4>Колоды и элементы</h4>
+                        <p>В игре 3 колоды карт: Герои, игровая колода и Катакомбы. Также нужны счётчики HP, счётчики МР и кубик d6.</p>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon"><img src="images/icons/rules-quick/quick-setup.svg" alt="" width="32" height="32" decoding="async"></div>
+                        <h4>Подготовка и старт</h4>
+                        <p>В начале игры каждый игрок вытягивает по 1 карте из колоды Героя — это персонаж на столе. По карте выставьте базовую АТК (верхний левый угол) и HP (правый верхний угол). На счётчики: HP по значению Героя, МР = 3. Все бросают d6 — кто выбросил больше, ходит первым. Игрокам раздают по 3 карты из игровой колоды.</p>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon"><img src="images/icons/rules-quick/quick-turn.svg" alt="" width="32" height="32" decoding="async"></div>
+                        <h4>Ход игрока</h4>
+                        <p>В конце каждого своего хода восстанавливайте +3 МР. Также в конце хода добор до 3 карт в руке из игровой колоды.</p>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon"><img src="images/icons/rules-quick/quick-draw.svg" alt="" width="32" height="32" decoding="async"></div>
+                        <h4>Рука</h4>
+                        <p>В начале у каждого игрока по 3 карты в руке. В конце хода добирайте карты так, чтобы снова было 3.</p>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon"><img src="images/icons/rules-quick/quick-creatures.svg" alt="" width="32" height="32" decoding="async"></div>
+                        <h4>Существа на столе</h4>
+                        <p>Существа имеют стоимость МР (верх по центру). Вытянув существо, вы можете выложить его на стол, потратив указанное МР. Каждое Существо имеет особенность, АТК и HP. После атаки кладите карту в усталость (рубашкой вверх) до следующего хода; такие карты атаковать нельзя.</p>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon"><img src="images/icons/rules-quick/quick-combat.svg" alt="" width="32" height="32" decoding="async"></div>
+                        <h4>Атака и урон</h4>
+                        <p>При атаке существа и карты героев наносят выбранной цели урон, равный базовой АТК атакующей карты. Если урон &gt;= HP цели — цель умирает. Героя можно атаковать, только если у противника нет своих существ на столе или они в усталости. Если у атакуемой цели АТК &gt;= вашей атакующей карты — ваша карта умирает (если нет — получает эффект усталости). Можно атаковать 2 или 3 картами одновременно: суммируйте АТК.</p>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon"><img src="images/icons/rules-quick/quick-spells.svg" alt="" width="32" height="32" decoding="async"></div>
+                        <h4>Заклинания</h4>
+                        <p>Заклинание берётся в руку и используется во время поединка для атаки или защиты. При использовании тратите МР в размере, указанном на карте. После использования карта уходит в сброс.</p>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon"><img src="images/icons/rules-quick/quick-catacombs.svg" alt="" width="32" height="32" decoding="async"></div>
+                        <h4>Катакомбы</h4>
+                        <p>В Катакомбы можно попасть, вытянув карту «Вход в Катакомбы» из игровой колоды и используя её, потратив 1 МР. При входе вы берёте 1 карту из колоды Катакомб.</p>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon"><img src="images/icons/rules-quick/quick-artifacts-traps.svg" alt="" width="32" height="32" decoding="async"></div>
+                        <h4>Артефакты и ловушки</h4>
+                        <p>В колоде Катакомб есть артефакты и ловушки. Артефакты кладутся рядом с Герое́м и действуют до конца игры. Ловушки берутся в руку и используются в любое время по описанию ловушки.</p>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-icon"><img src="images/icons/rules-quick/quick-win.svg" alt="" width="32" height="32" decoding="async"></div>
+                        <h4>Победа и опции</h4>
+                        <p>Проигрывает тот, у кого Герой потеряет все HP. Последний оставшийся в живых Герой побеждает. Можно добровольно пропустить ход и дополнительно восстановить 3 МР помимо основного восстановления.</p>
+                    </div>
+                </div>
+
+                <div class="rules-downloads">
+                    <a href="pdf/quick-rules.pdf" class="btn btn-primary rules-download-btn" download><img src="images/icons/icon-pdf-download.svg" alt="" class="rules-download-btn-icon" width="20" height="20" decoding="async"><span>Скачать краткие правила (PDF)</span></a>
+                </div>
+            </section>
+
+            <!-- ПОДРОБНЫЕ ПРАВИЛА -->
+            <section id="detailed-rules" class="rules-section">
+                <h2>Подробные правила</h2>
+
+                <!-- Оглавление -->
+                <div class="table-of-contents">
+                    <h3>Оглавление</h3>
+                    <ul>
+                        <li><a href="#components">Компоненты игры</a></li>
+                        <li><a href="#setup">Подготовка к игре</a></li>
+                        <li><a href="#turn">Ход игрока</a></li>
+                        <li><a href="#card-types">Типы карт</a></li>
+                        <li><a href="#combat">Боевые правила</a></li>
+                        <li><a href="#catacombs">Катакомбы</a></li>
+                        <li><a href="#win-lose">Условия победы/поражения</a></li>
+                        <li><a href="#examples">Примеры ситуаций</a></li>
+                    </ul>
+                </div>
+
+                <!-- 1. Компоненты игры -->
+                <section id="components" class="rules-subsection">
+                    <h3>1. Компоненты игры</h3>
+                    <ul>
+                        <li><strong>Колода Героев</strong> — 12 уникальных карт для выбора начального персонажа</li>
+                        <li><strong>Игровая колода</strong> — 80+ карт (существа, заклинания, входы в катакомбы)</li>
+                        <li><strong>Колода Катакомб</strong> — артефакты и ловушки</li>
+                        <li><strong>Счётчики HP</strong> — для отслеживания уровня жизни</li>
+                        <li><strong>Счётчики МР</strong> — для отслеживания маны</li>
+                        <li><strong>Кубик d6</strong> — для розыгрыша и механик</li>
+                    </ul>
+                </section>
+
+                <!-- 2. Подготовка к игре -->
+                <section id="setup" class="rules-subsection">
+                    <h3>2. Подготовка к игре</h3>
+                    <ol>
+                        <li>Каждый игрок вытягивает 1 карту из колоды Героев и кладёт её перед собой лицом вверх.</li>
+                        <li>Установите счётчик HP на значение с карты Героя.</li>
+                        <li>Установите счётчик МР на 3.</li>
+                        <li>Каждый из основной колоды берёт 3 карты в руку.</li>
+                        <li>Все бросают d6. Кто выбросил наибольшее число — ходит первым.</li>
+                    </ol>
+                </section>
+
+                <!-- 3. Ход игрока -->
+                <section id="turn" class="rules-subsection">
+                    <h3>3. Ход игрока</h3>
+                    <div class="phase-description">
+                        <p>Ход состоит из 4 фаз (в любом порядке, но после каждого использования карты восстанавливаются ресурсы):</p>
+                        <div class="phases-grid">
+                            <div class="phase">
+                                <h4 class="rules-heading-with-icon"><img src="images/icons/rules-detailed/phase-draw.svg" alt="" class="rules-heading-icon-img" width="24" height="24" decoding="async"><span>Фаза 1: Добор карт</span></h4>
+                                <p>Добрать карты до 3 в руке из основной колоды.</p>
+                            </div>
+                            <div class="phase">
+                                <h4 class="rules-heading-with-icon"><img src="images/icons/rules-quick/quick-draw.svg" alt="" class="rules-heading-icon-img" width="24" height="24" decoding="async"><span>Фаза 2: Использование карт</span></h4>
+                                <p>Разыграть существ (затратив МР) или использовать заклинания при участии в бою.</p>
+                            </div>
+                            <div class="phase">
+                                <h4 class="rules-heading-with-icon"><img src="images/icons/rules-quick/quick-creatures.svg" alt="" class="rules-heading-icon-img" width="24" height="24" decoding="async"><span>Фаза 3: Атака</span></h4>
+                                <p>Ваши существа атакуют врагов. После атаки идут в состояние усталости.</p>
+                            </div>
+                            <div class="phase">
+                                <h4 class="rules-heading-with-icon"><img src="images/icons/rules-detailed/phase-recover.svg" alt="" class="rules-heading-icon-img" width="24" height="24" decoding="async"><span>Фаза 4: Восстановление</span></h4>
+                                <p>Восстановите 3 МР. Переведите усталые карты в обычное состояние.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 4. Типы карт -->
+                <section id="card-types" class="rules-subsection">
+                    <h3>4. Типы карт</h3>
+
+                    <div class="card-type-block">
+                        <h4 class="rules-heading-with-icon"><img src="images/icons/rules-detailed/type-heroes.svg" alt="" class="rules-heading-icon-img" width="24" height="24" decoding="async"><span>Герои (12)</span></h4>
+                        <p>Это ваш основной персонаж. Каждый герой имеет:</p>
+                        <ul>
+                            <li><strong>АТК</strong> — базовая атака (верхний левый угол)</li>
+                            <li><strong>HP</strong> — начальная жизнь (верхний правый угол)</li>
+                            <li><strong>Способность</strong> — уникальный эффект героя</li>
+                        </ul>
+                        <p>Когда герой теряет все HP, вы выбыли из игры.</p>
+                    </div>
+
+                    <div class="card-type-block">
+                        <h4 class="rules-heading-with-icon"><img src="images/icons/rules-detailed/type-creatures.svg" alt="" class="rules-heading-icon-img" width="24" height="24" decoding="async"><span>Существа (звери, демоны, духи, нежить, драконы, орки)</span></h4>
+                        <p>Карты, которые выкладываются на стол:</p>
+                        <ul>
+                            <li><strong>Стоимость МР</strong> — сколько маны стоит разыграть (верх по центру)</li>
+                            <li><strong>АТК</strong> — урон при атаке</li>
+                            <li><strong>HP</strong> — здоровье существа</li>
+                            <li><strong>Способность</strong> — что делает это существо особенным</li>
+                        </ul>
+                        <p>После атаки существо идёт в состояние <strong>усталости</strong> (рубашкой вверх) до вашего следующего хода.</p>
+                    </div>
+
+                    <div class="card-type-block">
+                        <h4 class="rules-heading-with-icon"><img src="images/icons/rules-quick/quick-spells.svg" alt="" class="rules-heading-icon-img" width="24" height="24" decoding="async"><span>Заклинания (21)</span></h4>
+                        <p>Карты мгновенного действия:</p>
+                        <ul>
+                            <li>Затрачивают МР согласно описанию</li>
+                            <li>Используются во время боя (атака или защита)</li>
+                            <li>После использования идут в сброс</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-type-block">
+                        <h4 class="rules-heading-with-icon"><img src="images/icons/rules-detailed/type-weapons.svg" alt="" class="rules-heading-icon-img" width="24" height="24" decoding="async"><span>Орудия (5)</span></h4>
+                        <p>Улучшения для существ и героев:</p>
+                        <ul>
+                            <li>Увеличивают АТК или HP</li>
+                            <li>Могут давать дополнительные способности</li>
+                            <li>Прикрепляются то существу или герою</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-type-block">
+                        <h4 class="rules-heading-with-icon"><img src="images/icons/rules-quick/quick-artifacts-traps.svg" alt="" class="rules-heading-icon-img" width="24" height="24" decoding="async"><span>Артефакты (11)</span></h4>
+                        <p>Постоянные бонусы:</p>
+                        <ul>
+                            <li>Раскладываются рядом с героем</li>
+                            <li>Остаются до конца игры</li>
+                            <li>Дают различные эффекты (бонусы к АТК, HP, восстановление МР, способности)</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-type-block">
+                        <h4 class="rules-heading-with-icon"><img src="images/icons/rules-detailed/type-traps.svg" alt="" class="rules-heading-icon-img" width="24" height="24" decoding="async"><span>Ловушки (5)</span></h4>
+                        <p>Опасные карты из Катакомб:</p>
+                        <ul>
+                            <li>Берутся в руку после входа в Катакомбы</li>
+                            <li>Активируются по описанию (при входе врага, в начале хода и т.д.)</li>
+                            <li>Наносят урон или блокируют способности</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-type-block">
+                        <h4 class="rules-heading-with-icon"><img src="images/icons/rules-detailed/type-door.svg" alt="" class="rules-heading-icon-img" width="24" height="24" decoding="async"><span>Входы в Катакомбы</span></h4>
+                        <p>Специальная карта:</p>
+                        <ul>
+                            <li>Стоимость: 1 МР</li>
+                            <li>В основной колоде 10 одинаковых копий</li>
+                            <li>Используется для входа в Катакомбы (см. раздел 6)</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 5. Боевые правила -->
+                <section id="combat" class="rules-subsection">
+                    <h3>5. Боевые правила</h3>
+
+                    <div class="rule-block">
+                        <h4>Атака существа</h4>
+                        <p>Ваше существо может атаковать:</p>
+                        <ul>
+                            <li>Существо противника</li>
+                            <li>Героя противника (только если у него нет существ на столе или все их существа в состоянии усталости)</li>
+                        </ul>
+                    </div>
+
+                    <div class="rule-block">
+                        <h4>Урон и HP</h4>
+                        <p><strong>Урон = АТК атакующей карты</strong></p>
+                        <p>Если урон ≥ HP цели, то цель <strong>умирает</strong> (идёт в сброс).</p>
+                    </div>
+
+                    <div class="rule-block">
+                        <h4>Усталость (важно!)</h4>
+                        <p>После атаки существо <strong>переворачивается рубашкой вверх</strong> (эффект усталости):</p>
+                        <ul>
+                            <li>Усталое существо НЕ может атаковать</li>
+                            <li>Усталое существо НЕ может быть целью атаки</li>
+                            <li>В конце вашего следующего хода существо переворачивается обратно</li>
+                        </ul>
+                    </div>
+
+                    <div class="rule-block">
+                        <h4>Контратака</h4>
+                        <p>Если атакуемая карта имеет АТК ≥ HP атакующей карты:</p>
+                        <ul>
+                            <li>Атакующая карта умирает (сброс)</li>
+                            <li>Атакуемая карта НЕ идёт в усталость (она защищалась!)</li>
+                        </ul>
+                        <p>В противном случае атакуемая карта идёт в усталость.</p>
+                    </div>
+
+                    <div class="rule-block">
+                        <h4>Групповая атака</h4>
+                        <p>2 или 3 ваших существа могут атаковать <strong>одну</strong> цель одновременно:</p>
+                        <ul>
+                            <li>Суммируется АТК всех атакующих</li>
+                            <li>ВСЕ атакующие идут в усталость</li>
+                            <li>Контратака наносится в полной мере сумме АТК</li>
+                        </ul>
+                    </div>
+
+                    <div class="rule-block">
+                        <h4>Заклинания</h4>
+                        <p>Используются во время боя:</p>
+                        <ul>
+                            <li>Затрачивают МР согласно описанию</li>
+                            <li>Наносят урон, дают защиту или усиление</li>
+                            <li>После использования идут в сброс</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 6. Катакомбы -->
+                <section id="catacombs" class="rules-subsection">
+                    <h3>6. Катакомбы</h3>
+
+                    <div class="rule-block">
+                        <h4>Как войти</h4>
+                        <ul>
+                            <li>Вытяните карту «Вход в Катакомбы» из основной колоды</li>
+                            <li>Разыграйте её, потратив <strong>1 МР</strong></li>
+                            <li>Возьмите 1 карту из колоды Катакомб</li>
+                        </ul>
+                    </div>
+
+                    <div class="rule-block">
+                        <h4>Артефакты</h4>
+                        <p>Если вы вытянули артефакт:</p>
+                        <ul>
+                            <li>Положите его рядом с вашим героем</li>
+                            <li>Артефакт остаётся до конца игры</li>
+                            <li>Активируется эффект артефакта (бонус к АТК, HP, МР и т.д.)</li>
+                        </ul>
+                    </div>
+
+                    <div class="rule-block">
+                        <h4>Ловушки</h4>
+                        <p>Если вы вытянули ловушку:</p>
+                        <ul>
+                            <li>Возьмите её в руку</li>
+                            <li>Активируется согласно описанию (может быть использована в любой момент или сразу срабатывает)</li>
+                            <li>После использования идёт в сброс</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 7. Условия победы/поражения -->
+                <section id="win-lose" class="rules-subsection">
+                    <h3>7. Условия победы/поражения</h3>
+
+                    <div class="rule-block">
+                        <h4>Как проиграть</h4>
+                        <p><strong>Ваш герой теряет все HP → вы выбываете из игры</strong></p>
+                    </div>
+
+                    <div class="rule-block">
+                        <h4>Как выиграть</h4>
+                        <p><strong>Быть последним оставшимся в живых героем</strong></p>
+                    </div>
+
+                    <div class="rule-block">
+                        <h4>Дополнительное правило: пропуск хода</h4>
+                        <p>Вы можете добровольно пропустить свой ход:</p>
+                        <ul>
+                            <li>Пропустите стандартное восстановление (3 МР)</li>
+                            <li>Получите <strong>+3 МР вместе со стандартным восстановлением</strong> = всего 6 МР</li>
+                            <li>Усталые карты всё равно переворачиваются</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 8. Примеры ситуаций -->
+                <section id="examples" class="rules-subsection">
+                    <h3>8. Примеры ситуаций</h3>
+
+                    <div class="example-block">
+                        <h4>Пример 1: Простая атака</h4>
+                        <p><strong>Ситуация:</strong> У вас на столе существо «Волк вьюги» (АТК 3, HP 2). У противника существо «Гоблин» (АТК 2, HP 2).</p>
+                        <p><strong>Действие:</strong> Вы атакуете гоблина.</p>
+                        <p><strong>Результат:</strong> Гоблин получает 3 урона (≥ его 2 HP), гоблин умирает и идёт в сброс. Ваш волк идёт в усталость (рубашкой вверх).</p>
+                    </div>
+
+                    <div class="example-block">
+                        <h4>Пример 2: Контратака</h4>
+                        <p><strong>Ситуация:</strong> У вас существо (АТК 2, HP 3). У противника существо (АТК 4, HP 3).</p>
+                        <p><strong>Действие:</strong> Вы атакуете существо противника.</p>
+                        <p><strong>Результат:</strong> Ваше существо наносит 2 урона (не убивает). Но у противника АТК (4) ≥ вашего HP (3), значит ваше существо умирает в контратаке!</p>
+                    </div>
+
+                    <div class="example-block">
+                        <h4>Пример 3: Групповая атака</h4>
+                        <p><strong>Ситуация:</strong> У вас 3 существа (все с АТК 2, HP 2). У противника герой (АТК 4, HP 8).</p>
+                        <p><strong>Действие:</strong> Все три существа атакуют героя одновременно суммируя атаку.</p>
+                        <p><strong>Результат:</strong> Суммарный урон = 2+2+2 = 6. Герой получает 6 урона (от 8 осталось 2 HP). Все три существа идут в усталость.</p>
+                    </div>
+
+                    <div class="example-block">
+                        <h4>Пример 4: Вход в Катакомбы</h4>
+                        <p><strong>Ситуация:</strong> У вас в руке карта «Вход в Катакомбы», текущая МР = 5.</p>
+                        <p><strong>Действие:</strong> Вы разыгрываете вход (1 МР) и берёте карту из колоды Катакомб.</p>
+                        <p><strong>Результат:</strong> МР становится 4. Вы вытянули артефакт «Кольцо Силы» — кладёте его рядом с героем и активируете его эффект.</p>
+                    </div>
+                </section>
+
+                <div class="rules-downloads">
+                    <a href="pdf/full-rules.pdf" class="btn btn-primary rules-download-btn" download><img src="images/icons/icon-pdf-download.svg" alt="" class="rules-download-btn-icon" width="20" height="20" decoding="async"><span>Скачать полную инструкцию (PDF)</span></a>
+                </div>
+            </section>
+            </div>
+        </div>
+    </main>
+
+    <button class="back-to-top" id="backToTop" aria-label="Наверх">↑</button>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 ЭНТУЗИАСТ</p>
+                <div class="footer-links">
+                    <a href="https://vk.com/vladkragv" target="_blank" class="footer-link">VK</a>
+                    <a href="https://t.me/vladkragv" target="_blank" class="footer-link">Telegram</a>
+                    <span class="footer-byline">by vladkragv</span>
+                </div>
+                <div class="footer-lang">
+                    <label for="langSwitcher" class="footer-lang-label">Язык</label>
+                    <select id="langSwitcher" class="footer-lang-select" aria-label="Смена языка сайта">
+                        <option value="ru">Русский</option>
+                        <option value="en">English</option>
+                        <option value="kk">Qazaqsha</option>
+                        <option value="uk">Українська</option>
+                        <option value="be">Беларуская</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </div>
+                <div class="footer-age-rating">14+</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/card-i18n.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/dynamic-content.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/responsive-optimization.js"></script>
+    <script src="js/rules-loader.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/rules.js"></script>
+</body>
+</html>

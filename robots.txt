@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cofe-game.ru/sitemap.xml
