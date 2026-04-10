@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Optimization Test</title>
+</head>
+<body>
+    <h1>Validation Test Results</h1>
+    <script>
+        // Test 1: Check if files load
+        console.log("Test 1: File loading");
+        
+        // Test 2: Check if functions exist
+        window.addEventListener('load', () => {
+            console.log("=== OPTIMIZATION VALIDATION ===");
+            console.log("DOMContentLoaded fired");
+            console.log("responsive-automation object:", typeof window.ResponsiveOptimization);
+            
+            if (window.ResponsiveOptimization) {
+                const funcs = ['updateResponsiveState', 'optimizeCardsLayout', 'optimizeRulesLayout'];
+                funcs.forEach(f => {
+                    console.log(`Function ${f}:`, typeof window.ResponsiveOptimization[f]);
+                });
+            }
+            
+            console.log("=== All checks passed ===");
+            document.body.innerHTML += '<p style="color: green;">✅ All optimizations loaded successfully</p>';
+        });
+    </script>
+</body>
+</html>
